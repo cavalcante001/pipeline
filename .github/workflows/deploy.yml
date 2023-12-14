@@ -35,6 +35,6 @@ jobs:
         TARGET: ${{secrets.TARGET}}
         EXCLUDE: "/node_modules/, **.env,"
         SCRIPT_AFTER: |
-        cd ${{secrets.TARGET}}
+        cd /home/ubuntu
         cp ./build/* /var/www/html
         sudo rm -rf ./build
