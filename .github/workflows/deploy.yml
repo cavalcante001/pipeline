@@ -30,7 +30,7 @@ jobs:
         SSH_PRIVATE_KEY: ${{secrets.DEPLOY}}
         ARGS: "-rlgoDzvc -i"
         SOURCE: "./build/*"
-        REMOTE_HOST: "ec2-52-4-175-133.compute-1.amazonaws.com"
-        REMOTE_USER: "ubuntu"
-        TARGET: "/var/www/html"
+        REMOTE_HOST: ${{secrets.HOST}}
+        REMOTE_USER: ${{secrets.USER}}
+        TARGET: ${{secrets.TARGET}}
         EXCLUDE: "/node_modules/, **.env,"
