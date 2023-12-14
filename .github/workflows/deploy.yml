@@ -34,3 +34,7 @@ jobs:
         REMOTE_USER: ${{secrets.USER}}
         TARGET: ${{secrets.TARGET}}
         EXCLUDE: "/node_modules/, **.env,"
+        SCRIPT_AFTER: |
+        cd ${{secrets.TARGET}}
+        cp ./build/* /var/www/html
+        sudo rm -rf ./build
